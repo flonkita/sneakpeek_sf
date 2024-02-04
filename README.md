@@ -11,4 +11,9 @@ Pour l'instant il est en full symfony, API Platform arrivera sur le chemin et qu
 
 
 ## 1. Ajouter votre fichier '.env.local' en adaptant avec les paramètres suivants pour utiliser vous aussi sneakpeek :
-DATABASE_URL=
+DATABASE_URL= Votre URL pour la base de données : 
+
+Pour créer une base de données :
+php bin/console d:d:c 
+php bin/console make:migration
+php bin/console doctrine:migrations:migrate
