@@ -9,12 +9,13 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+{% if produit is empty %}
+	<p>
+<b class="text-3xl font-bold text-white">Il n'y a pas d'articles de dispo. Du moins pas encore...</b>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/wamp64/www/sneakpeek_sf/src/Controller/HomeController.php</code></li>
-        <li>Your template at <code>C:/wamp64/www/sneakpeek_sf/templates/home/index.html.twig</code></li>
-    </ul>
+	</p>
+{% else %}
+
+{% endif %}
 </div>
 {% endblock %}
