@@ -23,6 +23,12 @@ class Produit
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $description = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $image = null;
+
+    #[ORM\Column]
+    private ?int $Pointure = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -60,6 +66,30 @@ class Produit
     public function setDescription(?string $description): static
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(string $image): static
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    public function getPointure(): ?int
+    {
+        return $this->Pointure;
+    }
+
+    public function setPointure(int $Pointure): static
+    {
+        $this->Pointure = $Pointure;
 
         return $this;
     }
